@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add cache-buster to prevent stale responses
         params.append('_', Date.now());
         
-        const response = await fetch(`/api/news?${params}`);
+        const response = await fetch(`http://localhost:3001/api/news?${params}`);
         
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
